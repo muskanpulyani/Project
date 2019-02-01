@@ -1,10 +1,9 @@
-version: "2.0"
+version: "3.0"
 services:
-   database1:
+   database:
     build:
      context: .
      dockerfile: dockerfile
-   database2:
-    build:
-     context: .
-     dockerfile: dockerfile
+    deploy:
+     replicas: 3
+   
