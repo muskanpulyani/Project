@@ -2,17 +2,18 @@ version: "2.0"
 services:
    database:
     container_name: mongo
-    image: mongo
-    tty: true
-    ports:
-       - 27017:27017
+    build:
+     context: .
+     dockerfile: dockerfile2
+    tty: true   
+
    node:
     container_name: nodejs
-    restart: always
     depends_on:
      - "database"
     build:
      context: .
-     dockerfile: dockerfile
+     dockerfile: dockerfile   
     ports:
-        - 4000:4000
+        - 4000:4000   
+ 

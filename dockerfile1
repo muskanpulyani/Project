@@ -1,0 +1,7 @@
+From ubuntu
+Run apt-get  update -y
+Run apt-get install  npm -y
+chmod 777 ./
+Run sudo npm install express -y
+Run sudo npm install mongoose -y
+Run sudo npm install body-parser -y
